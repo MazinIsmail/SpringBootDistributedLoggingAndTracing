@@ -23,7 +23,13 @@ public class MicroserviceOneService {
 		logger.warn("Warn :: checkLogTrace");
 		logger.error("Error :: checkLogTrace");
 
+		callMicroserviceTwo();
 		logger.debug("End :: checkLogTrace");
+	}
+
+	public void callMicroserviceTwo() {
+		
+		
 	}
 
 }
