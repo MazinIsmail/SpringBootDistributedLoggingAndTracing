@@ -29,7 +29,7 @@ public class MicroserviceTwoService {
 	public String callMicroserviceThree() {
 		logger.info("Info :: callMicroserviceThree");
 		logger.debug("Debug :: callMicroserviceThree");
-		return restTemplate.getForObject("http://localhost:9003/microserviceThree/",String.class);
+		return restTemplate.getForObject("http://localhost:9003/microserviceThree/serviceThree",String.class);
 	}
 
 }

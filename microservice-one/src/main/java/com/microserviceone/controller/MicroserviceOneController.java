@@ -22,5 +22,10 @@ public class MicroserviceOneController {
 	public void checkLogTrace() {
 		microserviceOneService.checkLogTrace();
 	}
+	
+	@GetMapping("/hello")
+	public String hello() {
+		return microserviceOneService.checkLogTrace();
+	}
 
 }

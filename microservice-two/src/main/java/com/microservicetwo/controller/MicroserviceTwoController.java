@@ -23,7 +23,7 @@ public class MicroserviceTwoController {
 		microserviceTwoService.checkLogTrace();
 	}
 	
-	@GetMapping("/serviceTwo")
+	@GetMapping("/servicetwo")
 	public String callFromMicroserviceOne() {
 		return microserviceTwoService.callMicroserviceThree();
 	}

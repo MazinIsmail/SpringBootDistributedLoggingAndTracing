@@ -14,7 +14,7 @@ public class MicroserviceOneService {
 	@Autowired
 	private RestTemplate restTemplate;
 
-	public void checkLogTrace() {
+	public String checkLogTrace() {
 		logger.debug("Start :: checkLogTrace");
 
 		logger.trace("Trace :: checkLogTrace");
@@ -23,8 +23,8 @@ public class MicroserviceOneService {
 		logger.warn("Warn :: checkLogTrace");
 		logger.error("Error :: checkLogTrace");
 
-		callMicroserviceTwo();
-		logger.debug("End :: checkLogTrace");
+		return callMicroserviceTwo();
+		//logger.debug("End :: checkLogTrace");
 	}
 
 	public String callMicroserviceTwo() {
@@ -32,7 +32,7 @@ public class MicroserviceOneService {
 		logger.debug("Debug :: callMicroserviceTwo");
 		logger.warn("Warn :: callMicroserviceTwo");
 		logger.error("Error :: callMicroserviceTwo");
-		String response = restTemplate.getForObject("http://localhost:9002/microserviceTwo/", String.class);
+		String response = restTemplate.getForObject("http://localhost:9002/microserviceTwo/servicetwo", String.class);
 		logger.debug("End :: callMicroserviceTwo");
 		return response;
 	}
