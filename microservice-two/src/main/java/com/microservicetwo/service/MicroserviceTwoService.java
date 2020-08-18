@@ -25,5 +25,11 @@ public class MicroserviceTwoService {
 
 		logger.debug("End :: checkLogTrace");
 	}
+	
+	public String callMicroserviceThree() {
+		logger.info("Info :: callMicroserviceThree");
+		logger.debug("Debug :: callMicroserviceThree");
+		return restTemplate.getForObject("localhost:9003/serviceThree",String.class);
+	}
 
 }
