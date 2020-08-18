@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.microservicethree.service.MicroserviceThreeService;
 
 @RestController
-@RequestMapping("/microserviceOne")
+@RequestMapping("/microserviceThree")
 public class MicroserviceThreeController {
 
 	@Autowired

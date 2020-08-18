@@ -32,7 +32,7 @@ public class MicroserviceOneService {
 		logger.debug("Debug :: callMicroserviceTwo");
 		logger.warn("Warn :: callMicroserviceTwo");
 		logger.error("Error :: callMicroserviceTwo");
-		String response = restTemplate.getForObject("localhost:9002/serviceTwo", String.class);
+		String response = restTemplate.getForObject("http://localhost:9002/microserviceTwo/", String.class);
 		logger.debug("End :: callMicroserviceTwo");
 		return response;
 	}
