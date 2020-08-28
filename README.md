@@ -1,4 +1,4 @@
-# SpringBootDistributedLoggingAndTracing
+# SpringBootZipkin
 
 https://zipkin.io/pages/quickstart
 java -jar zipkin.jar
